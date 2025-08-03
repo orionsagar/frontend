@@ -77,11 +77,12 @@ const Products = () => {
     e.preventDefault();
     setError('');
     try {
+      const parsedPrice = parseFloat(form.price);
       const payload = {
         name: form.name,
         version: form.version,
         description: form.description,
-        price: form.price ? parseFloat(form.price) : undefined,
+        price: !isNaN(parsedPrice) ? parsedPrice : undefined,
       };
 
       if (editingId) {

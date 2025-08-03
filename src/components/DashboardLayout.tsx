@@ -27,6 +27,11 @@ const DashboardLayout = () => {
               Projects
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/dashboard/auditlog" style={({ isActive }) => ({ color: isActive ? 'cyan' : 'white' })}>
+              Audit Log/History
+            </NavLink>
+          </li>
           {/* <li>
             <NavLink to="/dashboard/items" style={({ isActive }) => ({ color: isActive ? 'cyan' : 'white' })}>
               Items
